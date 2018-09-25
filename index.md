@@ -67,6 +67,12 @@
 1. How do you implement a bucket sort algorithm?
 1. How do you implement a counting sort algorithm?
 1. How is a radix sort algorithm implemented?
-1. How do you swap two numbers without using the third variable?
 1. How do you check if two rectangles overlap with each other?
 1. How do you design a vending machine?
+
+## Programming techniques
+
+1. How do you swap two numbers without using the third variable?
+1. Write a program printing hello world without using semicolon.
+1. Print hello world n times without using loop.
+1. User input a number, print out odd or even without using if statement.
