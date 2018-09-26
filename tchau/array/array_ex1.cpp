@@ -3,8 +3,6 @@
 
 using namespace std;
 
-#define MIN 1
-#define MAX 100
 #define DEBUG 0
 
 
@@ -15,18 +13,17 @@ using namespace std;
 */
 
 
-int findMissedNumberInIntegerArray(int arr[], int min, int max)
+int findMissedNumberInIntegerArray(int arr[])
 {
 	int sum = 0;
 	int tmpSum = 0;
-	for(int i=min; i<=max; i++)
+	
+	//n*(n+1)/2 = sum(1,n)
+	tmpSum = 100*(100+1)/2;
+	
+	for(int i=1; i<=100; i++)
 	{
-		tmpSum+=i;
 		sum+=arr[i-1];
-#if DEBUG
-		cout<<"Line: "<<__LINE__<< " Func: "<<__FUNCTION__;
-		cout<<"a["<<i-1<<"] = "<<arr[i-1]<<endl;
-#endif
 	}
 
 #if DEBUG
@@ -41,35 +38,21 @@ int findMissedNumberInIntegerArray(int arr[], int min, int max)
 
 int main(int argc, char const *argv[])
 {
-	int arr[MAX];
+	int arr[100];
 	int ret = 0;
-	int num = 0;
 
-	cout<<"Please enter the number that's missed (1-100): ";
-	cin>>num;
-
-#if DEBUG
-	cout<<"The number that you enter: "<<num<<endl;
-#endif
-	if (num < MIN  || num > MAX)
+	memset(arr, 0, 100);
+	for (int i = 1; i <= 100; ++i)
 	{
-		cout<<"We only accept the number from "<<MIN<<" to "<<MAX<<endl;
-		return -1;
-	}
-
-	memset(arr, 0, MAX);
-	for (int i = MIN; i <= MAX; ++i)
-	{
-		if (i != num)
-		{
-			arr[i-1] = i;
+		arr[i-1] = i;			
 #if DEBUG
-			cout<<"Added a["<<i-1<<"] = "<<arr[i-1]<<endl;
+		cout<<"Added a["<<i-1<<"] = "<<arr[i-1]<<endl;
 #endif
-		}
 	}
+	//Missed number (position 36 in the array)
+	arr[35] = 0;
 
-	ret = findMissedNumberInIntegerArray(arr, MIN, MAX);
+	ret = findMissedNumberInIntegerArray(arr);
 	cout<< "Your array has missed: "<< ret<< endl;
 	return 0;
 }
