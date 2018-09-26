@@ -1,10 +1,7 @@
 #include <iostream>
-#include <cstring>
+#include <cstdlib>
 
 using namespace std;
-
-#define DEBUG 0
-
 
 /*
 * Function: findMissedNumberInIntegerArray
@@ -21,38 +18,58 @@ int findMissedNumberInIntegerArray(int arr[])
 	//n*(n+1)/2 = sum(1,n)
 	tmpSum = 100*(100+1)/2;
 	
-	for(int i=1; i<=100; i++)
+	for(int i=1; i<=99; i++)
 	{
 		sum+=arr[i-1];
 	}
 
-#if DEBUG
-	cout<<"Sum: "<<sum<<endl;
-	cout<<"tmpSum: "<<tmpSum<<endl;
-#endif
-
 	return tmpSum - sum;
 }
 
+// init the array of 1..100 with a missing number
+void init_test(int *array, int &missing_num)
+{
+	if (array == NULL) return;
 
+	missing_num = rand() % 100 + 1;
+	int seed = 1;
+	int i = 0;
+	while (seed <= 100)
+	{
+		if (seed != missing_num)
+		{
+			array[i] = seed;
+			++i;
+		}
+		++seed;
+	}
+
+	for (int i = 0; i < 30; ++i)
+	{
+		int a = rand() % 99;
+		int b = rand() % 99;
+
+		int t = array[a];
+		array[a] = array[b];
+		array[b] = t;
+	}
+}
 
 int main(int argc, char const *argv[])
 {
 	int arr[100];
 	int ret = 0;
 
-	memset(arr, 0, 100);
-	for (int i = 1; i <= 100; ++i)
-	{
-		arr[i-1] = i;			
-#if DEBUG
-		cout<<"Added a["<<i-1<<"] = "<<arr[i-1]<<endl;
-#endif
-	}
-	//Missed number (position 36 in the array)
-	arr[35] = 0;
+	srand(time(NULL));
 
-	ret = findMissedNumberInIntegerArray(arr);
-	cout<< "Your array has missed: "<< ret<< endl;
+	// run 10 test cases
+	for (int i = 0; i<10; ++i)
+	{
+		int missing_num;
+		init_test(arr, missing_num);
+
+		ret = findMissedNumberInIntegerArray(arr);
+		cout<< "EXPECT: "<< missing_num<<" - RESULT: "<< ret<< endl;
+	}
 	return 0;
 }
