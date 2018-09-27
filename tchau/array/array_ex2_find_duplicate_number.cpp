@@ -14,10 +14,11 @@ using namespace std;
 void find_duplicate_number(int array[], int n)
 {
 	
-	printArray(array,10);
-	bubbleSort2(array,10);
-	cout << "hello" << endl;
-	printArray(array,10);
+	// printArray(array,n);
+	bubbleSort(array,n);
+
+	cout << "After using bubble sort:" << endl;
+	printArray(array,n);
 
 	int current = array[0];
 	int cnt 	= 1;
@@ -50,7 +51,6 @@ void find_duplicate_number(int array[], int n)
 int main(int argc, char const *argv[])
 {
 	int arr[] = {10,2,54,0,34,2,1,4,1,10};
-	cout << "hi" << endl;
 	find_duplicate_number(arr,10);
 	return 0;
 }
