@@ -4,7 +4,7 @@
 
 ### Array
 
-1. How do you find the missing number in a given integer array of 1 to 100? [(solution)](tchau/array/find_missing_element)
+1. How do you find the missing number in a given integer array of 1 to 100? [(solution)](tchau/array/find_missing_element) [(solution 2)](nqvinh/array/find_missing_number/Readme)
 1. How do you find the duplicate number on a given integer array?
 1. How do you find duplicate numbers in an array if it contains multiple duplicates?
 1. How are duplicates removed from a given array?
