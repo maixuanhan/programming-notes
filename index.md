@@ -60,9 +60,9 @@
 
 ### Algorithms
 
-1. How is a bubble sort algorithm implemented?
+1. How is a bubble sort algorithm implemented? [(solution)](nqvinh/algorithms_sort/bubble_sort/)
 1. How is an iterative quicksort algorithm implemented?
-1. How do you implement an insertion sort algorithm?
+1. How do you implement an insertion sort algorithm? [(solution)](nqvinh/algorithms_sort/insert_sort/)
 1. How is a merge sort algorithm implemented?
 1. How do you implement a bucket sort algorithm?
 1. How do you implement a counting sort algorithm?
