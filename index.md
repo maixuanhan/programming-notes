@@ -35,7 +35,7 @@
 1. How do you print duplicate characters from a string? [(solution)](nqvinh/string/print_duplicate_char/)
 1. How do you check if two strings are anagrams of each other? [(solution)](nqvinh/string/check_two_strings_are_anagram/)
 1. How do you print the first non-repeated character from a string?
-1. How can a given string be reversed using recursion?
+1. How can a given string be reversed using recursion? [(solution)](nqvinh/string/reverse_string_using_recursion/)
 1. How do you check if a string contains only digits?
 1. How are duplicate characters found in a string?
 1. How do you count a number of vowels and consonants in a given string?

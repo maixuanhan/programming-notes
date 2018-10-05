@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 /*
-    1 . How do you implement an insertion sort algorithm?
+    3 . How do you implement an insertion sort algorithm?
     Algorithm
     // Sort an arr[] of size n
     insertionSort(arr, n)
