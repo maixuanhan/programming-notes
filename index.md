@@ -5,9 +5,9 @@
 ### Array
 
 1. How do you find the missing number in a given integer array of 1 to 100? [(solution)](tchau/array/find_missing_element) [(solution 2)](nqvinh/array/find_missing_number/)
-1. How do you find the duplicate number on a given integer array?
-1. How do you find duplicate numbers in an array if it contains multiple duplicates?
-1. How are duplicates removed from a given array?
+1. How do you find the duplicate number on a given integer array? [(solution)](nqvinh/array/find_duplicate_num_simple/)
+1. How do you find duplicate numbers in an array if it contains multiple duplicates? [(solution)](nqvinh/array/find_multiple_duplicate/)
+1. How are duplicates removed from a given array? [(solution)](nqvinh/array/delete_duplicate_member/)
 1. How do you find the largest and smallest number in an unsorted integer array?
 1. How do you find all pairs of an integer array whose sum is equal to a given number?
 1. How do you reverse an array?
@@ -15,8 +15,8 @@
 
 ### Linked List
 
-1. How do you find the middle element of a singly linked list in one pass?
-1. How do you check if a given linked list contains a cycle? How do you find the starting node of the cycle?
+1. How do you find the middle element of a singly linked list in one pass? [(solution)](nqvinh/linked_List/find_middle_element/)
+1. How do you check if a given linked list contains a cycle? How do you find the starting node of the cycle? [(solution)](nqvinh/linked_List/find_cirle_and_starting_of_circle/)
 1. How do you reverse a linked list?
 1. How are duplicate nodes removed in an unsorted linked list?
 1. How do you find the length of a singly linked list?
@@ -34,7 +34,7 @@
 
 1. How do you print duplicate characters from a string? [(solution)](nqvinh/string/print_duplicate_char/)
 1. How do you check if two strings are anagrams of each other? [(solution)](nqvinh/string/check_two_strings_are_anagram/)
-1. How do you print the first non-repeated character from a string?
+1. How do you print the first non-repeated character from a string? [(solution)](nqvinh/string/print_first_non_repeated/)
 1. How can a given string be reversed using recursion? [(solution)](nqvinh/string/reverse_string_using_recursion/)
 1. How do you check if a string contains only digits?
 1. How are duplicate characters found in a string?
@@ -42,7 +42,7 @@
 1. How do you count the occurrence of a given character in a string?
 1. How do you find all permutations of a string?
 1. How do you reverse words in a given sentence without using any library method?
-1. How do you check if two strings are a rotation of each other?
+1. How do you check if two strings are a rotation of each other? [(solution)](nqvinh/string/two_strings_are_a_rotation_of_each_other/)
 1. How do you check if a given string is a palindrome?
 
 ### Tree
