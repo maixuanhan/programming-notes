@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <canvas id="myCanvas" width="1000px" height="600px" style="border:1px solid #d3d3d3;">
+        Your browser does not support the HTML5 canvas tag.</canvas>
+
+    <script>
+
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        c.width = window.innerWidth;
+        c.height = window.innerHeight;
+
+        const LENGTH_UNIT = 5;
+        var X = c.width / 2;
+        var Y = c.height / 2;
+        var R = 1 * LENGTH_UNIT;
+        var current_angle = 0;
+
+        var drawNextArc = function (x, y, r) {
+            var next_angle = (current_angle + 1) % 4;
+            ctx.arc(x, y, r, current_angle * Math.PI / 2, next_angle * Math.PI / 2);
+            current_angle = next_angle;
+        };
+
+        var n1 = 0;
+        var n2 = 1;
+        var getNextFibo = function () {
+            var ret_val = n1 + n2;
+            n1 = n2;
+            n2 = ret_val;
+            return ret_val;
+        };
+
+        ctx.beginPath();
+
+        drawNextArc(X, Y, R);
+
+        for (var i = 0; i < 50; ++i) {
+            switch (current_angle) {
+                case 0: X -= n1 * LENGTH_UNIT; break;
+                case 1: Y -= n1 * LENGTH_UNIT; break;
+                case 2: X += n1 * LENGTH_UNIT; break;
+                case 3: Y += n1 * LENGTH_UNIT; break;
+                default: break; // not reachable
+            }
+
+            R = getNextFibo() * LENGTH_UNIT;
+            drawNextArc(X, Y, R);
+        }
+
+        ctx.stroke();
+
+    </script>
+
+</body>
+
+</html>

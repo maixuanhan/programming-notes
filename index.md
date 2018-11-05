@@ -76,3 +76,7 @@
 1. Write a program printing hello world without using semicolon.
 1. Print hello world n times without using loop.
 1. User input a number, print out odd or even without using if statement.
+
+## Miscellaneous
+
+1. Draw Fibonacci spiral using HTML5 canvas [(view)](mxhan/fibo/fibo.html)
