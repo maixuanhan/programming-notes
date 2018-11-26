@@ -2,7 +2,7 @@
 
 ## Daily Coding Problem
 
-[DailyCodingProblem](/dailycodingproblem/README.MD)
+[DailyCodingProblem](/dailycodingproblem/)
 
 ## Data structure and algorithm
 
