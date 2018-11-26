@@ -2,6 +2,7 @@
 
 This repository contains problems and solutions of the [Daily Coding Problem](https://www.dailycodingproblem.com/) tasks.
 
+1. [TEST](00_test/)
 1. [Sum of twos](01_sum_2/)
 1. [Product of not missings](02_product_missing/)
 1. [Tree seriallization](03_tree_seriallization/)

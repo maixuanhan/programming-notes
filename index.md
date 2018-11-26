@@ -2,7 +2,7 @@
 
 ## Daily Coding Problem
 
-[DailyCodingProblem](/dailycodingproblem/)
+[DailyCodingProblem](dailycodingproblem/)
 
 ## Data structure and algorithm
 
