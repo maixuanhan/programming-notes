@@ -2,6 +2,7 @@
 #include <cassert>
 #include <string>
 #include <sstream>
+#include <memory>
 
 using namespace std;
 
@@ -17,6 +18,7 @@ class Node
 
     ~Node()
     {
+        // cout << "deleting " << this->val << endl;
         if (this->left != nullptr)
             delete this->left;
         if (this->right != nullptr)
@@ -40,10 +42,10 @@ string serialize(Node *node)
 }
 
 static Node *deserialize(stringstream &ss);
-Node *deserialize(string s)
+unique_ptr<Node> deserialize(string s)
 {
     auto ss = stringstream(s);
-    return deserialize(ss);
+    return unique_ptr<Node>(deserialize(ss));
 }
 
 int main()
@@ -53,11 +55,10 @@ int main()
     auto s = serialize(pNode);
     cout << s << endl;
 
-    auto s2 = serialize(deserialize(s));
-    cout << s2 << endl;
-
     assert(deserialize(serialize(pNode))->left->left->val == "left.left");
     cout << "PASSED!" << endl;
+
+    delete pNode;
 
     return 0;
 }
@@ -92,10 +93,12 @@ static Node *deserialize(stringstream &ss)
     char *temp = new char[count + 1];
     ss.read(temp, count);
     ss.get();
+    string val = temp;
+    delete[] temp;
 
     if (!ss.good())
         return nullptr;
 
-    Node *node = new Node(temp, deserialize(ss), deserialize(ss));
+    Node *node = new Node(val, deserialize(ss), deserialize(ss));
     return node;
 }
