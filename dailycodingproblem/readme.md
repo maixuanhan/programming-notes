@@ -6,3 +6,6 @@
 [Problem 4](problem4/)
 [Problem 5](problem5/)
 [Problem 6](problem6/)
+[Problem 7](problem7/)
+[Problem 8](problem8/)
+[Problem 9](problem9/)
