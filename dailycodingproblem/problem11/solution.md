@@ -1,0 +1,1 @@
+A dictionary tree should be implemented. Each node represents a character and has a pointer pointing to other 26 possible characters.
